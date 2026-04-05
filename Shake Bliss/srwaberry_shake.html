@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chocolate Milkshake Calories</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f8f5f2;
+            margin: 0;
+            padding: 20px;
+            color: #f70000;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #fc0000;
+        }
+
+        ul {
+            line-height: 1.8;
+        }
+
+        .section {
+            margin-bottom: 20px;
+        }
+
+        .highlight {
+            background: #ffcccc;
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        /* ✅ Button Styling Added */
+        .btn {
+            display: block;
+            margin: 20px auto;
+            background: #ff4848;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 25px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: #ff0000;
+        }
+
+        .price {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Strawberry Dream</h1>
+
+    <div class="section">
+        <h2>🥤 Ingredients</h2>
+        <ul>
+          <li>Fresh Strawberries (6–8 pcs) → ~50 kcal</li>
+          <li>Milk (1 cup / 200–250 ml) → ~120 kcal</li>
+          <li>Sugar (2 tsp) → ~30 kcal</li>
+        </ul>
+    </div>
+
+    <div class="section highlight">
+        <h2>🔥 Total Calories</h2>
+        <p><strong></strong>200 kcal</strong></p>
+    </div>
+    
+    <div class="section">
+    <h2>🍬 Extra Toppings</h2>
+
+    <label><input type="checkbox" value="140" onchange="updateCalories()"> Vanilla Ice Cream (140)</label><br>
+    <label><input type="checkbox" value="50" onchange="updateCalories()"> Whipped Cream (50 kcal)</label><br>
+    <label><input type="checkbox" value="40" onchange="updateCalories()">Strawberry Syrup (40 kcal)</label><br>
+    <label><input type="checkbox" value="50" onchange="updateCalories()"> Crushed Nuts (50 kcal)</label><br>
+    <label><input type="checkbox" value="70" onchange="updateCalories()"> Chocolate Chips (70 kcal)</label><br>
+    <label><input type="checkbox" value="60" onchange="updateCalories()"> Honey (60 kcal)</label>
+</div>
+<div class="section highlight">
+    <h2>🔥 Total Calories (Live)</h2>
+    <p><strong id="totalCalories">200 kcal</strong></p>
+</div>
+<!-- ✅ Order Section -->
+    <div class="section">
+        <p class="price"><strong>🔥 Price: ₹120</strong></p>
+        <button class="btn" onclick="orderNow()">Order Now 🛒</button>
+    </div>
+</div>
+
+
+<script>
+let baseCalories = 200;
+
+function updateCalories() {
+    let total = baseCalories;
+
+    let checkboxes = document.querySelectorAll('input[type="checkbox"]');
+
+    checkboxes.forEach(function(box) {
+        if (box.checked) {
+            total += Number(box.value);
+        }
+    });
+
+    document.getElementById("totalCalories").innerText = total + " kcal";
+}
+
+function orderNow() {
+    alert("🎉 Your customized milkshake order has been placed!");
+}
+</script>
+
+</body>
+</html>

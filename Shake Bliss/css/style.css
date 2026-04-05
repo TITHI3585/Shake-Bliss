@@ -1,0 +1,154 @@
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #a18cd1, #fbc2eb);
+      background-size: 400% 400%;
+      animation: gradient 10s ease infinite;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      padding: 15px 40px;
+      background: white;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    nav h1 {
+      color: #e04ced;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #000000;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #ff4d6d;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 80px 20px;
+      animation: fadeIn 2s ease;
+    }
+
+    .hero h2 {
+      font-size: 50px;
+      color: #ffffff;
+    }
+
+    .menu {
+      padding: 40px;
+      text-align: center;
+    }
+
+    .menu h2 {
+      color: #dbff4d;
+    }
+    
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.1);
+    }
+
+    .btn {
+      margin-top: 10px;
+      padding: 10px 20px;
+      border: none;
+      background: #ff4d6d;
+      color: white;
+      border-radius: 20px;
+      cursor: pointer;
+      position: relative;
+      z-index: 2; 
+    }
+
+    .btn:hover {
+      background: #ff758f;
+    }
+
+    .banner {
+      background: #ffe066;
+      padding: 10px;
+      text-align: center;
+      font-weight: bold;
+      animation: slide 8s linear infinite;
+    }
+    .card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+p {
+  color: rgb(226, 195, 142);
+}
+.about {
+  text-align: center;
+  background: rgba(188, 184, 184, 0.352);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+ h2 {
+  font-family: 'Pacifico', cursive;
+}
+
+ p {
+  color: #000000;
+  font-family: 'Dancing Script', cursive;
+}
+   
+  padding: 30px;
+  border-radius: 20px;
+  width: 60%;
+  margin: 50px auto;
+  text-align: center;
+
+  border: 1px solid rgba(168, 4, 4, 0.838);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+}
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: white;
+      margin-top: 40px;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(-30px);} 
+      to {opacity: 1; transform: translateY(0);} 
+    }
+
+    @keyframes slide {
+      from {transform: translateX(-100%);} 
+      to {transform: translateX(100%);} 
+    }
